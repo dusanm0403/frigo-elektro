@@ -1,0 +1,32 @@
+@import '../../styles/base/breakpoints';
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  border-top: 1px solid #800000;
+  margin: 0 auto;
+
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @include lg {
+      justify-content: space-around;
+    }
+
+    a {
+      padding: 1rem;
+      font-size: 1rem;
+      @include md {
+        font-size: 1.4rem;
+      }
+      @include lg {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
