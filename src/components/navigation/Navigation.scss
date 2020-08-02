@@ -2,30 +2,73 @@
 
 .navigation {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  border-top: 1px solid #800000;
+  width: 95%;
+  border-top: 1px solid #000000;
+
   margin: 0 auto;
 
   .links {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    @include lg {
+    width: 80%;
+    border-bottom: 1px solid #000000;
+
+    @include sd {
       justify-content: space-around;
     }
 
     a {
-      padding: 1rem;
-      font-size: 1rem;
-      @include md {
-        font-size: 1.4rem;
+      padding: .3rem .7rem;
+      font-size: .8rem;
+
+      &:hover {
+        mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.65) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .65) 70%);
+        mask-size: 200%;
+        animation: shine 2s infinite;
       }
+
+      @keyframes shine {
+        from {
+          -webkit-mask-position: 150%;
+        }
+
+        to {
+          -webkit-mask-position: -50%;
+        }
+      }
+
+      @include sd {
+        font-size: .9rem;
+      }
+
+      @include md {
+        padding: .5rem 1rem;
+        font-size: 1rem;
+      }
+
       @include lg {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .phone-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    margin: 0 auto;
+
+    a {
+      font-size: 1.6rem;
+
+      @include sd {
+        font-size: 2rem;
       }
     }
   }

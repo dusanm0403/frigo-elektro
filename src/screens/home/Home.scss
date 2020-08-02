@@ -1,5 +1,73 @@
+@import '../../styles/base/breakpoints';
+
 .home {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+
+  @include md {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+
+  .screen-description {
+    width: 90%;
+    padding-bottom: 2rem;
+    text-align: center;
+
+
+    @include md {
+      width: 60%;
+      padding: 0 1rem;
+      text-align: left;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.8rem;
+
+      @include sd {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+
+      @include md {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+      }
+    }
+  }
+
+  .screen-picture {
+    width: 80%;
+    margin-bottom: 8rem;
+
+    @include sd {
+      width: 60vmin;
+    }
+
+    @include md {
+      width: 30%;
+      padding: 0;
+    }
+
+    @include lg {
+      width: 25%;
+    }
+
+    @include xl {
+      width: 20%;
+    }
+
+
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
 }
