@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.scss";
-import homePic from "../../assets/logos.png"
+import homePic from "../../assets/logos1.png"
 
 const Home = () => {
   return <div className="home">
