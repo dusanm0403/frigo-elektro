@@ -1,0 +1,169 @@
+@import '../../styles/base/breakpoints';
+
+.InputForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+  width: 90%;
+  height: 35vmax;
+  border-radius: 7px;
+  border: 1px solid black;
+  padding: 0 .5rem;
+  background-color: #f5f5f5;
+  box-shadow: 0 6px 10px -7px;
+  margin-top: 2rem;
+  min-height: 20rem;
+
+  @include sd {
+    width: 50vmax;
+    margin: 2rem;
+  }
+
+  @include md {
+    width: 35%;
+  }
+
+  @include lg {
+    height: 20vmax;
+    width: 30%;
+  }
+
+  @include xl {
+    width: 25%;
+  }
+}
+
+.model-input,
+.number-input,
+.name-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: .7rem;
+  margin: 0.5rem 0;
+  color: black;
+
+  @include sd {
+    font-size: .8rem;
+  }
+
+  @include md {
+    font-size: .9rem;
+  }
+
+  @include lg {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+
+.description-input {
+  display: flex;
+  justify-content: space-between;
+  height: 40%;
+  width: 100%;
+  margin-top: 2rem;
+  font-size: .7rem;
+  margin: 0.5rem 0;
+  color: black;
+
+  @include sd {
+    font-size: .8rem;
+  }
+
+  @include md {
+    font-size: .9rem;
+  }
+
+  @include lg {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+
+.name-input input,
+.model-input input,
+.number-input input {
+  width: 70%;
+  height: 80%;
+  font-size: .7rem;
+  background-color: #fff;
+  padding: 0.3rem;
+  border-radius: 4px;
+  border: 1px solid #171605;
+
+  @include sd {
+    width: 60%;
+    font-size: .8rem;
+  }
+
+  @include md {
+    width: 50%;
+    font-size: .9rem;
+  }
+
+  @include lg {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+
+/* label {
+  color: whitesmoke;
+} */
+
+.description-input textarea {
+  width: 70%;
+  height: 100%;
+  font-size: .7rem;
+  background-color: #fff;
+  text-align: left;
+  padding: 0.3rem;
+  resize: none;
+  border-radius: 4px;
+  border: 1px solid #171605;
+
+  @include sd {
+    font-size: .8rem;
+  }
+
+  @include md {
+    font-size: .9rem;
+  }
+
+  @include lg {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+
+.submit-wrapper {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  justify-content: center;
+  align-items: center;
+  margin: .5rem 0;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  padding: .5rem;
+  font-size: .7rem;
+  border: 1px solid #171605;
+  border-radius: 4px;
+
+  @include lg {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}

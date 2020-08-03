@@ -1,24 +1,31 @@
 import React from "react";
-import "../home/Home.scss";
+import "../services/Services.scss";
+import machineService from '../../assets/machineService.jpg'
+import fridge from '../../assets/refrigerator-repairs.jpg'
 
 const Services = () => {
-  return <div className="home">
-    {/* <div className="screen-description">
-      <div className="description">Ves masine</div>
-      <img src={washer} alt="washer"/>
+  return <div className="services">
+    <div className="image-container-left">
+      <img src={machineService} alt="machineService" />
     </div>
-    <div className="screen-picture">
-      <div className="description">Frizideri</div>
-      <img src={fridge} alt="fridge"/>
+    <div className="services-description">
+      <p>Servis bele tehnike "Frigo-Elektro Andrej" servisira i popravlja:
+      <ul>
+          <li>Veš mašine</li>
+          <li>Frižidere</li>
+          <li>Šporete</li>
+          <li>Sušare</li>
+          <li>Bojlere</li>
+        </ul>
+        Specijalizovani smo za servisiranje uredjaja svih vodećih proizvođača.
+        Brzom i profesionalnom uslugom nastojimo da svaki kvar otklonimo u najkraćem mogućem roku.
+        Garantujemo za svaki rezervni deo koji Vam ugradimo, kao i za sam rad.
+
+      </p>
     </div>
-    <div className="screen-picture">
-      <div className="description">Sporeti</div>
-      <img src={oven} alt="oven"/>
+    <div className="image-container-right">
+      <img src={fridge} alt="fridge" />
     </div>
-    <div className="screen-picture">
-      <div className="description">Bojleri</div>
-      <img src={heater} alt="heater"/>
-    </div> */}
   </div>;
 };
 
