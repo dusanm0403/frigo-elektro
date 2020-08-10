@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   width: 95%;
-  border-top: 1px solid #000000;
+  border-top: 1px solid white;
   margin: 0 auto;
 
   .links {
@@ -14,7 +14,8 @@
     justify-content: center;
     align-items: center;
     width: 80%;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid white;
+
 
     @include sd {
       justify-content: space-around;
@@ -23,6 +24,8 @@
     a {
       padding: .3rem .7rem;
       font-size: .8rem;
+      color: white;
+
 
       &:hover {
         mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.65) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .65) 70%);

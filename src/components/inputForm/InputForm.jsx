@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../inputForm/InputForm.scss';
 import emailjs from 'emailjs-com';
+import success from '../../assets/success.svg'
+import error from '../../assets/error.svg'
+import cx from 'classnames'
+
 
 const InputForm = () => {
+  const [successVisible, setSuccessVisible] = useState(false)
+  const [errorVisible, setErrorVisible] = useState(false)
+
+  const successClasses = cx("success_hidden",
+    successVisible && "success_visible"
+  )
+  const errorClasses = cx("error_hidden",
+    errorVisible && "error_visible"
+  )
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.target);
@@ -23,9 +36,13 @@ const InputForm = () => {
     emailjs.send('gmail', templateId, dataObject, serviceId).then(
       function (response) {
         console.log('SUCCESS!', response.status, response.text);
+        setSuccessVisible(true)
+        setTimeout(()=>{setSuccessVisible(false)}, 3000)
       },
       function (err) {
         console.log('FAILED...', err);
+        setErrorVisible(true)
+        setTimeout(()=>{setErrorVisible(false)}, 3000)
       }
     );
 
@@ -76,7 +93,11 @@ const InputForm = () => {
         />
       </label>
       <div className="submit-wrapper">
-        <button className="submit-button">Posalji upit</button>
+        <button className="submit-button">
+          Pošalji upit
+        </button>
+        <img className={successClasses} src={success} alt="success" />
+        <img className={errorClasses} src={error} alt="error" />
       </div>
     </form>
   );

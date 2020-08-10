@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.scss";
-import phone from "../../assets/phone.png"
+import phone from "../../assets/phone2.png"
 
 
 const Footer = () => {
