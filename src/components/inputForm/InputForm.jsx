@@ -29,8 +29,8 @@ const InputForm = () => {
       phone: phone,
       description: description
     };
-    const serviceId = 'user_5PFA5dDLZA5cJ54Re4z7I';
-    const templateId = 'template_DzA0Get6';
+    const serviceId = 'user_kgLeggsK0WSDeJo4nul6X';
+    const templateId = 'template_fdrtGEyN';
 
 
     emailjs.send('gmail', templateId, dataObject, serviceId).then(
